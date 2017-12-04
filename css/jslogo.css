@@ -1,0 +1,17 @@
+BODY { margin:0px; padding:0px; }
+#content { margin:0px; padding:0px; top:0px; left:0px; }
+#editor { margin-left:160px;height:100%; margin-top:5px; }
+TH.func { height:24px; background:#F0F0F0; }
+TD.func { height:100%; overflow: auto; min-width:200px; vertical-align:top; text-align:center; }
+#menu { position:fixed;top:0px;background:#F0F0F0;padding:10px;width:128px;text-align:center; }
+#menu IMG { cursor:move; }
+TD IMG { vertical-align:middle; margin-right:5px; }
+TABLE.if { border:solid 1px #33ffd4; border-collapse:collapse; width:100%; height:128px; margin-top:5px; }
+TH.if { height:16px; background:#33ffd4; padding-left:5px; padding-right:5px; }
+TD.if { border:solid 1px #33ffd4; min-width:64px !important; min-height:64px; padding:10px; text-align:center; vertical-align:top; }
+TABLE.repeat { border:solid 1px #ff5733; border-collapse:collapse; width:100%; height:128px; margin-top:5px; }
+TH.repeat { height:16px; background:#ff5733; padding-left:5px; padding-right:5px; }
+TD.repeat { border:solid 1px #ff5733; min-width:64px !important; min-height:64px; padding:10px; text-align:center; vertical-align:top; }
+.error { background:  #FF4040 url(../images/jslogo/fire.gif) repeat-x !important; }
+.cmd { margin-bottom:5px; }
+
