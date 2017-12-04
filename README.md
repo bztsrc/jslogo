@@ -40,29 +40,29 @@ For parameter names, just like with variable names, only latin letters allowed (
 
 <img src='images/jslogo/tutorials.png' height='24'> tutorials. You can load one of the built-in examples by clicking on this icon. Once a tutorial is loaded, you can save it on your machine.
 
-<img src='images/jslogo/forward.png' height='24'> `forward x`. Moves the turtle forward.
+<img src='images/jslogo/forward.png' height='24'> `forward expression`. Moves the turtle forward.
 
-<img src='images/jslogo/backward.png' height='24'> `backward x`. Makes the turtle to move backward.
+<img src='images/jslogo/backward.png' height='24'> `backward expression`. Makes the turtle to move backward.
 
-<img src='images/jslogo/left.png' height='24'> `left x`. Turns the turtle anti-clockwise. The unit is degree (0-360).
+<img src='images/jslogo/left.png' height='24'> `left expression`. Turns the turtle anti-clockwise. The unit is degree (0-360).
 
-<img src='images/jslogo/right.png' height='24'> `right x`. Turns the turtle clock-wise.
+<img src='images/jslogo/right.png' height='24'> `right expression`. Turns the turtle clock-wise.
 
 <img src='images/jslogo/pendown.png' height='24'> `pendown`. Tell the turtle to put down its tail, so that any movements (forward or backward) will leave mark in the sand.
 
 <img src='images/jslogo/penup.png' height='24'> `penup`. tell the turtle to lift up its tail. With tail lifted up, you can freely move the turtle without drawing anything.
 
-<img src='images/jslogo/color.png' height='24'> `color c`. Put some color paint on the turtle's tail so that it will leave marks with a specific color.
+<img src='images/jslogo/color.png' height='24'> `color #rrggbb`. Put some color paint on the turtle's tail so that it will leave marks with a specific color.
 
 <img src='images/jslogo/text.png' height='24'> `text size,string`. Because our turtle is very smart, you can tell it to write letters in the sand without specifying where to go and when to turn to get for example a letter 'A'. When the job is done, the turtle will return to it's original position (in other words writing letters does not move the turtle).
 
 <img src='images/jslogo/let.png' height='24'> `variable=expression`. The turtle has many boxes (variables), each with a label on it. You can tell the turtle to put something in one of the boxes with this. Later you can reference what's inside (value) by the box label (variable name). Some box labels are defined as function parameters. Using a previously non-existed variable will make the turtle to get a new box and label it.
 
-<img src='images/jslogo/call.png' height='24'> `func(a,b,É)`. Call a function. Put values in some boxes (specified by function parameters), and start executing the to do list.
+<img src='images/jslogo/call.png' height='24'> `func(a,b,...)`. Call a function. Put values in some boxes (specified by function parameters), and start executing the to do list.
 
-<img src='images/jslogo/if.png' height='24'> `if expression [ É ] else [ É ]`. Conditional blocks. Tells the turtle to check some box, and if they contain what specified, follow the commands on the left; if they differ, follow the commands on the right.
+<img src='images/jslogo/if.png' height='24'> `if expression [ ... ] else [ ... ]`. Conditional blocks. Tells the turtle to check some box, and if they contain what specified, follow the commands on the left; if they differ, follow the commands on the right.
 
-<img src='images/jslogo/repeat.png' height='24'> `repeat expression [ É ]`. Tells the turtle to repeat commands for specified times. Inside a repeat block, the special 'repcount' box holds the current iteration counter.
+<img src='images/jslogo/repeat.png' height='24'> `repeat expression [ ... ]`. Tells the turtle to repeat commands for specified times. Inside a repeat block, the special 'repcount' box holds the current iteration counter.
 
 <img src='images/jslogo/question.png' height='24'> `question variable,default,string`. Tells the turtle to ask something, and put the answer in a box (variable).
 
