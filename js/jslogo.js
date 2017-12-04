@@ -50,7 +50,7 @@ pe.jslogo = {
 		inp.setAttribute('style','display:none;');
 		document.body.appendChild(inp);
 		w.style='position:fixed;top:0px;left:0px;width:100%;height:100%;z-index:99;opacity:0.3;visibility:hidden;';
-		w.innerHTML='<img style="position:fixed;top:50;left:50;" src="images/jslogo/working.png">';
+		w.innerHTML='<img style="position:fixed;bottom:0px;right:0px;" src="images/jslogo/working.png">';
 		document.body.appendChild(w);
 		pe.jslogo.working=w;
 		window.addEventListener( "mousemove", pe.jslogo.display, false );
