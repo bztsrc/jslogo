@@ -2,7 +2,8 @@ Logo Interpreter in JavaScript
 ==============================
 
 My kids growing up fast. My older boy went to school this year, so I was thinking it's time to influence him with programming.
-Therefore I quickly put together this visual Logo Interpreter for his birthday. It was 2 days project, only tested with Firefox. Icons from Google Images, I do not own them. It comes without any warranty in the hope that it will be useful for other kids too.
+Therefore I quickly put together this visual Logo Interpreter for his birthday. It was 2 days project, only tested with Firefox and Chrome.
+Icons from Google Images, I do not own them. It comes without any warranty in the hope that it will be useful for other kids too.
 
 <img src='screenshot.png'>
 
@@ -14,7 +15,8 @@ File format
 Loosely compatible with original logo. I've used "main(w,h)" as the main function, which receives screen dimensions. That function
 cannot be called directly. Command arguments are separated by comma and variables are not prefixed by colon. It was easier to parse this way. Other keywords little bit modified, like "rand variable, min, max" which will generate a random number between [min, max) and will store it in the given variable.
 
-Don't expect failsafes in code loading, I've just provided a way to load ".lgo" files as they were saved. It is definitely not for importing hand written source code. Executing the code on the other hand does syntactically check commands, and provides visual feedback along with error messages on JavaScript console.
+Don't expect failsafes in code loading, I've just provided a way to load logo files as they were saved.
+It is definitely not for importing hand written source code. Executing the code on the other hand does syntactically check commands, and provides visual feedback along with error messages on JavaScript console.
 
 Interface
 ---------
@@ -32,7 +34,7 @@ For parameter names, just like with variable names, only latin letters allowed (
 
 <img src='images/jslogo/play.png' height='24'> starts execution by invoking 'main(w,h)' function. In case of run-time error, the appropriate command will be visually marked. Tell the turtle, 'do the thing'! :-)
 
-<img src='images/jslogo/load.png' height='24'> load a previously saved ".lgo" file from the file system.
+<img src='images/jslogo/load.png' height='24'> load a previously saved file from the file system.
 
 <img src='images/jslogo/save.png' height='24'> convert function panel into a plain text logo source and save it on the file system. You can specify the file name to use in Setup. Once saved, you can open it a text editor to see the source code that corresponds to the visual interface.
 

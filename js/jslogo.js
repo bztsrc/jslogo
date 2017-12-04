@@ -15,7 +15,7 @@ pe.jslogo = {
 	dragobj:null,
 	pen:true,
 	color:'#000000',
-	filename:'noname.lgo',
+	filename:'noname.txt',
 	args:null,
 	tutorials:[
 		{"name":"snowflake","preview":"iVBORw0KGgoAAAANSUhEUgAAAEAAAABAAQMAAACQp+OdAAAABlBMVEX///8AAABVwtN+AAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB+EMBBEqLWwOQcsAAADRSURBVCjPY2AgGzRAaUYFKIMpAcoQUoEy6qyhDAdGdEYCM5RhwAYVMGBhBhnJuCGBme0AiCHgwMjiAGTISzswfokAMsx4GxhumAEZYBuZkBkGIAYfEEuAGBxALABjgKXYkBWDjAAT5iBGBRBzghgeIEvBjgQRQCcwNkB5YFEw7wCyGlkQIwJmYBluh7EhO0wCt8MUWBoYONRABko6MNypAjlMyIFRBeQwBgloaDB+SGBmPwB2ggALI1pgYoZzjjSUYaUHiyZYfDHD4ouxgexEAAAvFRuJBA7SdwAAAABJRU5ErkJggg==","code":"to koch(h,l)\nh=h/3\nif l [\nkoch(h,l-1)\nleft 60\nkoch(h,l-1)\nright 120\nkoch(h,l-1)\nleft 60\nkoch(h,l-1)\n] else [\nforward h\n]\nend\n\nquestion l,4,"+L('Depth?')+"\npenup\nforward h/6\nright 90\nbackward w/6\npendown\nrepeat 3 [\nkoch(w,l)\nright 120\n]\n"},
@@ -392,7 +392,7 @@ pe.jslogo = {
 
 	save:function() {
 		var a=document.getElementById('download'), i, tbl=document.getElementById("editor"), txt='';
-		if(pe.jslogo.filename==null||pe.jslogo.filename=='') pe.jslogo.filename='noname.lgo';
+		if(pe.jslogo.filename==null||pe.jslogo.filename=='') pe.jslogo.filename='noname.txt';
 		pe.jslogo.clearerr();
 		for(i=1;i<tbl.rows[0].cells.length;i++) txt+='to '+tbl.rows[0].cells[i].getAttribute('data-func')+'\n'+pe.jslogo.dom2lgo(tbl.rows[1].cells[i],1)+'end\n\n';
 		txt+=pe.jslogo.dom2lgo(tbl.rows[1].cells[0],0);
@@ -414,7 +414,7 @@ pe.jslogo = {
 
 	reset:function() {
 		if(!confirm(L('Are you sure?'))) return;
-		pe.jslogo.filename='noname.lgo';
+		pe.jslogo.filename='noname.txt';
 		pe.jslogo.menu=null;
 		pe.jslogo.main();
 	},
@@ -425,7 +425,7 @@ pe.jslogo = {
 		inp.setAttribute('style','position:fixed;background:#ffffff;top:35%;left:40%;width:20%;display:block;z-index:10;padding:5px;');
 		txt='<b>'+L('Tutorials')+'</b><br><div style="text-align:center;">';
 		for(i=0;i<pe.jslogo.tutorials.length;i++)
-			txt+='<div onclick="pe.jslogo.main();pe.jslogo.lgo2dom(pe.jslogo.tutorials['+i+'].name+\'.lgo\',pe.jslogo.tutorials['+i+'].code);" style="display:inline-block;margin:5px;padding:5px;border:outset 2px;text-align:center;width:80px;cursor:pointer;"><img src="data:image/png;base64,'+pe.jslogo.tutorials[i].preview+'"><br>'+L(pe.jslogo.tutorials[i].name)+'</div>';
+			txt+='<div onclick="pe.jslogo.main();pe.jslogo.lgo2dom(pe.jslogo.tutorials['+i+'].name+\'.txt\',pe.jslogo.tutorials['+i+'].code);" style="display:inline-block;margin:5px;padding:5px;border:outset 2px;text-align:center;width:80px;cursor:pointer;"><img src="data:image/png;base64,'+pe.jslogo.tutorials[i].preview+'"><br>'+L(pe.jslogo.tutorials[i].name)+'</div>';
 		txt+="</div>";
 		inp.innerHTML=txt;
 	},
