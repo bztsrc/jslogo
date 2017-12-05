@@ -1,6 +1,7 @@
-var pe={},LANG={/*"Happy birthday":"Boldog szülinapot","Name?":"Neve?","Bad name!":"Hibás név!","Already exists!":"Már van ilyen!","Filename?":"Filenév?",
-"Setup":"Beállítások","Start!":"Start!","Load":"Betölt","Save":"Lement","Reset":"Újrakezd","Tutorials":"Példák",'forward':"Előre",'backward':"Hátra",'left':"Balra fordul",'right':"Jobbra fordul",'pendown':"Farkinca le",'penup':"Farkinca fel",'color':"Szín",'text':"Szöveg",'let':"Értékadás",'call':"Eljárás hívás",'if':"Elágazás",'repeat':"Ismétlés",'question':"Kérdés",'rand':"Véletlen",'alert':"Figyelmeztetés",'debug':"Hibakeresés",
-"addfunc":"Új eljárás","delfunc":"Eljárás törlése","Are you sure?":"Biztos vagy benne?","Variable":"Doboz","Prompt":"Kérdés","Expression":"Érték","pixels":"képpont","Default":"Alapért","Draw turtle":"Mutasd a teknőst","Debug execution":"Mutasd az utasításokat","Depth?":"Szintek száma?","How old are you?":"Hány éves vagy?","snowflake":"hópehely","wandering":"bóklászó","plant":"virág","curly":"íves","triangle":"háromszög","bdaycake":"torta"*/};
+var pe={},LANG={};
+if(location.href.substr(-2)=="hu") LANG={"Happy birthday":"Boldog szülinapot","Name?":"Neve?","Bad name!":"Hibás név!","Already exists!":"Már van ilyen!","Setup":"Beállítások","Start!":"Start!","Load":"Betölt","Save":"Lement","Reset":"Újrakezd","Tutorials":"Példák",'forward':"Előre",'backward':"Hátra",'left':"Balra fordul",'right':"Jobbra fordul",'pendown':"Farkinca le",'penup':"Farkinca fel",'color':"Szín",'text':"Szöveg",'let':"Értékadás",'call':"Eljárás hívás",'if':"Elágazás",'repeat':"Ismétlés",'question':"Kérdés",'rand':"Véletlen",'alert':"Figyelmeztetés",'debug':"Hibakeresés","Add function":"Új eljárás","Delete function":"Eljárás törlése","Are you sure?":"Biztos vagy benne?","Variable":"Doboz","Prompt":"Kérdés","Expression":"Érték","pixels":"képpont","Default":"Alapért","Draw turtle":"Mutasd a teknőst","Debug execution":"Mutasd az utasításokat","Depth?":"Szintek száma?","How old are you?":"Hány éves vagy?","snowflake":"hópehely","wandering":"bóklászó","plant":"virág","curly":"íves","triangle":"háromszög","bdaycake":"torta","Empty expression":"Üres kifejezés","No such variable":"Nincs ilyen változó","Missing expression":"Hiányzó kifejezés","Unknown keyword":"Ismeretlen kulcsszó","Missing argument":"Hiányzó paraméter","Bad variable":"Hibás változónév","Unknown function":"Ismeretlen eljárás","Arguments mismatch":"Eltérő paraméterszám","Unknown command":"Ismeretlen parancs"};
+if(location.href.substr(-2)=="de") LANG={"Happy birthday":"Alles Gute zum Geburtstag","Name?":"Name?","Bad name!":"Schlechter Name!","Already exists!":"Ist bereits vorhanden!","Setup":"Konfiguration","Start!":"Anfang!","Load":"Einladen","Save":"Ersparen","Reset":"Neu setzen","Tutorials":"Lernprogrammen","forward":"vorantreiben","backward":"zurück","left":"links","right":"rechts","pendown":"hinlegen","penup":"hochheben","color":"kolorieren","text":"schreiben","let":"angeben","call":"erfolgen","if":"ob","repeat":"repetieren","question":"fragen","rand":"würfeln","alert":"warnen","debug":"debuggen","Add function":"Neue Funktion","Delete function":"Lösche Funktion","Are you sure?":"Bist du sicher?","Variable":"Variable","Prompt":"Prompt","Expression":"Ausdruck","pixels":"Pixel","Default":"Default","Draw turtle":"Schildkröte anzeigen","Debug execution":"Ablaufverfolgung ausführen","Depth?":"Tiefe?","How old are you?":"Wie alt bist du?","snowflake":"Schneeflocke","wandering":"wandern","plant":"Pflanze","curly":"lockig","triangle":"Dreieck","bdaycake":"Gtagskuchen","Empty expression":"Leerer Ausdruck","No such variable":"Keine solche Variable","Missing expression":"Fehlender Ausdruck","Unknown keyword":"Unbekanntes Schlüsselwort","Missing argument":"Fehlendes Argument","Bad variable":"Schlechte Variable","Unknown function":"Unbekannte Funktion","Arguments mismatch":"Argumente stimmel nicht","Unknown command":"Unbekannter Befehl"};
+if(location.href.substr(-2)=="fr") LANG={"Happy birthday":"Bon anniversaire","Name?":"Prénom?","Bad name!":"Mauvais nom!","Already exists!":"Existe déjá!","Setup":"Configuration","Start!":"Début!","Load":"Charge","Save":"Enregistrer","Reset":"Réinitialiser","Tutorials":"Tutoriels","forward":"envoyer","backward":"arriéré","left":"gauche","right":"droite","pendown":"soulever","penup":"relever","color":"colorizer","text":"écrire","let":"attributer","call":"invoquer","if":"si","repeat":"répéter","question":"question","rand":"randomiser","alert":"alerte","debug":"déboguer","Add function":"Ajouter une fonction","Delete function":"Supprimer la fonction","Are you sure?":"Étes-vous sűr?","Variable":"Variable","Prompt":"Sujet","Expression":"Expression","pixels":"pixels","Default":"Défaut","Draw turtle":"Montrer la tortue","Debug execution":"Suivre l'exécution","Depth?":"Profondeur?","How old are you?":"Quel áge avez-vous?","snowflake":"neige","wandering":"errant","plant":"plante","curly":"bouclé","triangle":"triangle","bdaycake":"gáteau","Empty expression":"Expression vide","No such variable":"Pas une telle variable","Missing expression":"Expression manquante","Unknown keyword":"Mot-clé inconnu","Missing argument":"Argument manquant","Bad variable":"Mauvaise variable","Unknown function":"Fonction inconnue","Arguments mismatch":"Incompatibilité des arguments","Unknown command":"Commande inconnnue"};
 function L(t){return LANG[t]!=null&&LANG[t]!=undefined?LANG[t]:(t!=null?t.replace(/_/g,' '):'');}
 
 pe.jslogo = {
@@ -68,15 +69,15 @@ pe.jslogo = {
 			document.body.appendChild(pe.jslogo.dragging);
 		}
 		if(pe.jslogo.dragging!=null){
-		      if(e!=null){
-		        if(e.pageX){
-		          ml=e.pageX;mt=e.pageY;
-		        }else{
-		          ml=(event.clientX + document.body.scrollLeft);mt=(event.clientY+document.body.scrollTop);
-        		}
-		      }
-		      pe.jslogo.dragging.style.left=Math.floor(ml+10)+'px';
-		      pe.jslogo.dragging.style.top=Math.floor(mt+10)+'px';
+			if(e!=null){
+				if(e.pageX) {
+					ml=e.pageX;mt=e.pageY;
+				} else {
+					ml=(event.clientX + document.body.scrollLeft);mt=(event.clientY+document.body.scrollTop);
+				}
+			}
+			pe.jslogo.dragging.style.left=Math.floor(ml+10)+'px';
+			pe.jslogo.dragging.style.top=Math.floor(mt+10)+'px';
 		}
 	},
 
@@ -167,7 +168,10 @@ pe.jslogo = {
 
 	getargs:function(obj) {
 		var a,txt,cmd=obj.getAttribute('data-cmd'),val,pos=obj.getBoundingClientRect(),inp=document.getElementById('inp');
-		if(obj.parentNode.className!=null && obj.parentNode.className.match(/error/)) obj.parentNode.className=obj.parentNode.className.replace(' error','').trim();
+		if(obj.parentNode.className!=null && obj.parentNode.className.match(/error/)) {
+			obj.parentNode.className=obj.parentNode.className.replace(' error','').trim();
+			obj.parentNode.removeAttribute('title');
+		}
 		if(cmd=='pendown'||cmd=='penup') return;
 		pe.jslogo.args=obj.nextSibling;
 		val=pe.jslogo.args!=null&&pe.jslogo.args.innerHTML!=null?pe.jslogo.args.innerHTML.trim():''
@@ -228,7 +232,7 @@ pe.jslogo = {
 				txt+='<option value="'+s[i]+'"'+(s[i]==a[0]?' selected':'')+'>'+s[i]+'</option>';
 			}
 			txt+='</select>(<input type="text" value="'+(a[1]?a[1]:'')+'" onchange="pe.jslogo.setargs(event,\''+cmd+'\',this.previousSibling.previousSibling.value+\',\'+this.value.replace(/,/gi,\'\'));"  onkeyup="pe.jslogo.setargs(event,\''+cmd+'\',this.previousSibling.previousSibling.value+\',\'+this.value.replace(/,/gi,\'\'));">';
-			} else
+		} else
 			txt+='<input type="text" value="'+val+'" onchange="pe.jslogo.setargs(event,\''+cmd+'\',this.value.replace(/,/gi,\'\'));" onkeyup="pe.jslogo.setargs(event,\''+cmd+'\',this.value.replace(/,/gi,\'\'));">';
 		inp.innerHTML=txt;
 		if(cmd=='left'||cmd=='right') pe.jslogo.setdeg();
@@ -275,7 +279,7 @@ pe.jslogo = {
 			if(a.substr(0,a.indexOf('('))==func) {alert(L('Already exists!')); return; } }
 		th.setAttribute('data-func', name);
 		th.setAttribute('class', 'func');
-		th.innerHTML=name+'<img src="images/jslogo/delfunc.png" style="float:right;vertical-align:middle;cursor:pointer;" onclick="pe.jslogo.delfunc(this.parentNode);" title="'+L('delfunc')+'">';
+		th.innerHTML=name+'<img src="images/jslogo/delfunc.png" style="float:right;vertical-align:middle;cursor:pointer;" onclick="pe.jslogo.delfunc(this.parentNode);" title="'+L('Delete function')+'">';
 		td.setAttribute('data-func', name);
 		td.setAttribute('class', 'func');
 		td.setAttribute('onmouseup','return pe.jslogo.drop(event,this);');
@@ -303,7 +307,10 @@ pe.jslogo = {
 	clearerr:function() {
 		var i, tbl=document.getElementById("editor").getElementsByTagName('*');
 		for(i=0;i<tbl.length;i++) {
-			if(tbl[i].className!=null && tbl[i].className.match(/error/)) tbl[i].className=tbl[i].className.replace(' error','').trim();
+			if(tbl[i].className!=null && tbl[i].className.match(/error/)) {
+				tbl[i].className=tbl[i].className.replace(' error','').trim();
+				tbl[i].removeAttribute('title');
+			}
 		}
 	},
 
@@ -451,7 +458,7 @@ pe.jslogo = {
 			for(i=0;i<cmd.length;i++)
 				txt+='<img src="images/jslogo/'+cmd[i]+'.png" data-cmd="'+cmd[i]+'" draggable=false onmousedown="return pe.jslogo.drag(event);" title="'+L(cmd[i])+'">';
 			txt+='</div>';
-			txt+='<img src="images/jslogo/addfunc.png" style="position:absolute;top:17px;right:-30px;cursor:pointer;" onclick="pe.jslogo.addfunc();" title="'+L('addfunc')+'">';
+			txt+='<img src="images/jslogo/addfunc.png" style="position:absolute;top:17px;right:-30px;cursor:pointer;" onclick="pe.jslogo.addfunc();" title="'+L('Add function')+'">';
 			txt+='<table id="editor" border=1 cellspacing=0 cellpadding=10><tr><th class="func">main(w,h)</th></tr><tr><td class="func" data-func="main(w,h)" onmouseup="return pe.jslogo.drop(event,this);"></td></tr></table><br><br>';
 			pe.jslogo.menu.innerHTML=txt;
 			pe.jslogo.content.appendChild(pe.jslogo.menu);
@@ -482,7 +489,7 @@ pe.jslogo = {
 
 	expr:function(str,vars) {
 		if(str==null||str=='') throw 'Empty expression';
-		str=str.replace(/[a-z]+/gi,function makevar(s) { if(vars[s]==null) { console.log(str); throw 'No such variable \''+s+'\''; } return 'vars[\''+s+'\']'; });
+		str=str.replace(/[a-z]+/gi,function makevar(s) { if(vars[s]==null) { console.log(str); throw 'No such variable'; } return 'vars[\''+s+'\']'; });
 		return eval(str);
 	},
 
@@ -589,7 +596,7 @@ pe.jslogo = {
 			}
 		} catch(e) {
 			console.log('Logo ERROR:',e);
-			try{err.className+=' error';}catch(e){};
+			try{err.className+=' error';err.setAttribute('title',L(e.toString()));}catch(e){};
 			return false;
 		}
 		return true;
