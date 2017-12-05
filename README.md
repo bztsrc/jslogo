@@ -5,7 +5,7 @@ My kids growing up fast. My older boy went to school this year, so I was thinkin
 Therefore I quickly put together this visual Logo Interpreter for his birthday. It was 2 days project, only tested with Firefox and Chrome.
 Icons from Google Images, I do not own them. It comes without any warranty in the hope that it will be useful for other kids too.
 
-[Online demo](https://bztsrc.github.io/jslogo/)
+[Online demo (English)](https://bztsrc.github.io/jslogo/), [Magyar](https://bztsrc.github.io/jslogo/index.html?lang=hu), [Deutch](https://bztsrc.github.io/jslogo/index.html?lang=de), [Francais](https://bztsrc.github.io/jslogo/index.html?lang=hu)
 
 <img src='screenshot.png'>
 
